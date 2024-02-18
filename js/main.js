@@ -1,7 +1,7 @@
 import { sendHttpRequest } from './util.js';
 
 const URL =
-	'https://gist.githubusercontent.com/al3xback/10c6f23fb798283ee3766e51593abe48/raw/075d38ce32c92f698bd5ad3888b0483abdf3885d/stats-preview-data.json';
+	'https://gist.githubusercontent.com/al3xback/10c6f23fb798283ee3766e51593abe48/raw/a5865e93b1b632b06899a423bac779b1f7c8eeee/stats-preview-data.json';
 
 const cardWrapperEl = document.querySelector('.card-wrapper');
 const cardTemplate = document.getElementById('card-template');
@@ -31,8 +31,8 @@ const renderCardContent = (data) => {
 	const cardEl = cardTemplateNode.querySelector('.card');
 
 	const cardImageEl = cardEl.querySelector('.card__image img');
-	cardImageEl.src = './images/' + image;
-	cardImageEl.alt = name;
+	cardImageEl.src = './images/' + image.source;
+	cardImageEl.alt = image.alt;
 
 	const cardTitleEl = cardEl.querySelector('.card__title');
 	cardTitleEl.textContent = title;
